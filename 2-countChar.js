@@ -1,3 +1,7 @@
+/************************
+    Soluction 1
+************************/
+
 // function countChar(str) {
 //     var result = {};
 //     var lowerCaseStr = str.toLowerCase();
@@ -19,6 +23,11 @@
 //     return result;
 // }
 
+
+/************************
+    Soluction 2
+************************/
+
 // function countChar(str) {
 //     let obj = {};
 //     let formatedStrings = str.toLowerCase();
@@ -30,6 +39,10 @@
 //     }
 //     return obj;
 // }
+
+/************************
+    Soluction 3
+************************/
 
 function countChar(str) {
     let obj = {};
