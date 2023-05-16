@@ -1,5 +1,7 @@
+/************************
+    Soluction 1
+************************/
 
-// Solution 1
 // function same(arr1, arr2) {
 
 //     if (arr1.length !== arr2.length) { return false; }
@@ -16,7 +18,11 @@
 // let result = same([1, 2, 5, 1], [25, 4, 1, 1]);
 // console.log(result);
 
-// Solution 2
+
+/************************
+    Soluction 2
+************************/
+
 function same(arr1, arr2) {
     if (arr1.length !== arr2.length) { return false; }
 
