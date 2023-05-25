@@ -94,9 +94,19 @@ class LinkedList {
         }
         return temp;
     }
+
+    set(index, value) {
+        let temp = this.get(index);
+
+        if (temp) {
+            temp.value = value;
+            return true;
+        }
+        return false;
+    }
 }
 
-let myLinkedList = new LinkedList(0);
-myLinkedList.push(1);
-myLinkedList.push(2);
+let myLinkedList = new LinkedList(11);
 myLinkedList.push(3);
+myLinkedList.push(23);
+myLinkedList.push(7);
