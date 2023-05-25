@@ -66,10 +66,22 @@ class LinkedList {
         this.length++;
         return this;
     }
+
+    shift() {
+        if (!this.head) { return undefined; }
+
+        let temp = this.head;
+        this.head = this.head.next;
+        temp.next = null;
+        this.length--;
+
+        if (this.length === 0) {
+            this.tail = null;
+        }
+
+        return temp;
+    }
 }
 
-let myLinkedList = new LinkedList(11);
-myLinkedList.push(3);
-myLinkedList.push(27);
-myLinkedList.push(7);
-myLinkedList.unshift(4);
+let myLinkedList = new LinkedList(2);
+myLinkedList.push(1);
