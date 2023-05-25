@@ -81,7 +81,22 @@ class LinkedList {
 
         return temp;
     }
+
+    get(index) {
+        // if linked list is emtpy or index is passed index is wrong
+        if (!this.head || (index < 0 || index >= this.length)) { 
+            return undefined; 
+        }
+
+        let temp = this.head;
+        for (let i=0; i<index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
 }
 
-let myLinkedList = new LinkedList(2);
+let myLinkedList = new LinkedList(0);
 myLinkedList.push(1);
+myLinkedList.push(2);
+myLinkedList.push(3);
