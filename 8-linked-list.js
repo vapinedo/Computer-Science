@@ -107,7 +107,7 @@ class LinkedList {
 
     insert(index, value) {
         if (index === 0) return this.unshift(value);
-        if (index === this.length) return this.push(value);
+        if (index === this.length - 1) return this.push(value);
         if (index < 0 || index > this.length) return false;
         
         const newNode = new Node(value);
@@ -118,7 +118,22 @@ class LinkedList {
         this.length++;
         return true;
     }
+
+    remove(index) {
+        if (index < 0 || index > this.length) return undefined;
+        if (index === 0) return this.shift();
+        if (index === this.length - 1) return this.pop();
+
+        let before = this.get(index - 1);
+        let temp = before.next;
+        before.next = temp.next;
+        temp.next = null;
+        this.length--;
+        return temp;
+    }
 }
 
-let myLinkedList = new LinkedList(0);
+let myLinkedList = new LinkedList(11);
 myLinkedList.push(2);
+myLinkedList.push(23);
+myLinkedList.push(7);
